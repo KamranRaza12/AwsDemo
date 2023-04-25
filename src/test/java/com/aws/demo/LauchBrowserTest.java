@@ -16,7 +16,7 @@ public class LauchBrowserTest {
     	//WebDriver driver = new ChromeDriver();
 
     	//System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-    	System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	
     	ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
