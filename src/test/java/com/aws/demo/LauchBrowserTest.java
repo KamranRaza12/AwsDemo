@@ -15,7 +15,9 @@ public class LauchBrowserTest {
     	//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     	//WebDriver driver = new ChromeDriver();
 
-    	System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+    	//System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
+    	
     	ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("disable-gpu");
