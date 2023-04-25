@@ -14,13 +14,8 @@ phases:
       - wget https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_linux64.zip
       - unzip chromedriver_linux64.zip
       - sudo mv chromedriver /usr/bin/chromedriver
-  pre_build:
-    commands:
-      - echo Build Starting on `date`
+ 
   build:
     commands:
-      - echo Build Phase
-      - run-as user_name ls -la
-  post_build:
-    commands:
-      - echo Build completed on `date`
+      - mvn install
+ 
