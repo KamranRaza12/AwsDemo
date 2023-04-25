@@ -3,19 +3,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      java: openjdk11
     commands:
-      # Install Chrome and Chromedriver
-      - curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-      - echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-      - apt-get update && apt-get install -y google-chrome-stable
-      - wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv chromedriver /usr/bin/
-      # Install Maven
-      - apt-get install -y maven
+      - apt-get update
+      - apt-get install -y maven chromium-browser
+      - export CHROMEDRIVER_PATH=/usr/lib/chromium-browser/chromedriver
   pre_build:
     commands:
-      # Navigate to the project directory
+      - mvn clean
   build:
     commands:
-      # Compile and run the tests using Maven
       - mvn test
