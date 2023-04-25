@@ -11,7 +11,7 @@ phases:
       - apt-get update
       - apt-get install -y google-chrome-stable
       - echo Installing ChromeDriver
-      - wget -N https://chromedriver.storage.googleapis.com/88.0.4324.27/chromedriver_linux64.zip -P /root/
+      - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver linux64.zip
       - unzip chromedriver_linux64.zip
       - sudo mv chromedriver /usr/bin/chromedriver
   pre_build:
