@@ -6,10 +6,10 @@ phases:
       java: corretto11
     commands:
       - apt-get update
-      - echo Installing ChromeDriver
-      - wget https://chromedriver.storage.googleapis.com/111.0.5563.64/chromedriver_linux64.zip
-      - unzip chromedriver_linux64.zip
-      - sudo mv chromedriver /usr/bin/chromedriver
+      - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+      - tar -xvzf geckodriver*
+      - chmod +x geckodriver
+      - sudo mv geckodriver /usr/local/bin/
  
   build:
     commands:
