@@ -11,11 +11,12 @@ public class LauchBrowserTest {
 	@Test
     public void OpenBrowser()  {
     	WebDriver driver;
+    	
     	//String chromeDriverPath = System.getenv("CHROMEDRIVER_PATH");
     	//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     	//WebDriver driver = new ChromeDriver();
-
     	//System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+    	
     	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	
     	ChromeOptions options = new ChromeOptions();
